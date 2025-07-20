@@ -13,7 +13,9 @@ main > section {
 .display-flex {
   display: flex;
 }
-
+.text-primary {
+  color: #FF900E;
+}
 /* color 02 */
 .text-gray {
   color: #424242;
@@ -25,6 +27,7 @@ main > section {
 .bg-light {
   background-color: rgba(255, 144, 14, 0.1);
 }
+
 .btn-primary {
     background-color:#FF900E;
     color: white;
@@ -89,7 +92,7 @@ main {
   gap: 24px;
 }
 .our-features {
-  margin-left: 73px;
+  margin-left: 130px;
   max-width: 530px;
 }
 .feature-title {
@@ -101,8 +104,28 @@ main {
 }
 /* responsinve media query  */
 @media screen and (max-width: 576px){
-  .navbar, .nav-links{
+  .navbar, 
+  .nav-links, 
+  .teams{
     flex-direction: column;
+  }
+
+  .team-img-container{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .our-features {
+    margin-left: 20px;
   }
 }
 
+/* medium size device */
+@media screen and (min-width: 576px) and (max-width: 992px){
+
+  .teams {
+    flex-direction: column;
+  }
+  .our-features {
+    margin: 50px auto;
+  }
+  
+}
